@@ -19,7 +19,8 @@
     "reactotron-react-js": "^3.3.4",
     "recaptcha-v3-react": "^3.0.3",
     "serve": "^11.2.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "lottie-react-web": "^2.1.4"
   },
   "devDependencies": {
     "@types/styled-components": "^4.1.19",
