@@ -1,4 +1,4 @@
-import pxToRem from "helper/scales/scales";
+import { pxToRem } from "helper";
 import styled from "styled-components";
 import { IImagem } from "./type";
 

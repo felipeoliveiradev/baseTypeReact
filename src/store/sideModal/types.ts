@@ -1,15 +1,15 @@
 import { SET_TOOGLE } from "./consts";
 // ENUMS
 export enum Modals {
-  DEFAULT = "",
+  DEFAULT = ""
 }
 
 export enum ModalsTypes {
-  DEFAULT = "",
+  DEFAULT = ""
 }
 
 export enum ModalsHeader {
-  DEFAULT = "",
+  DEFAULT = ""
 }
 
 // INTERFACES

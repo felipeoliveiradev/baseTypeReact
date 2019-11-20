@@ -1,5 +1,5 @@
+import { pxToRem } from "helper";
 import styled from "styled-components";
-import pxToRem from ".././../helper/scales/scales";
 export const Container = styled.div`
   flex: 1;
   display: flex;

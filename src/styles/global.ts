@@ -1,9 +1,9 @@
-import Fonts from "helper/fonts/fonts";
+import { fonts } from "helper";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-${Fonts("Nunito", "woff2")};
+${fonts("Nunito", "woff2")};
 
  #root{
    position: absolute !important;

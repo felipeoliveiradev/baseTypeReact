@@ -1,5 +1,4 @@
-import grid from "helper/grid/grid";
-import pxToRem from "helper/scales/scales";
+import { grid, pxToRem } from "helper";
 import styled from "styled-components";
 import { IStyleFooter } from "./types";
 export const Container = styled.div`

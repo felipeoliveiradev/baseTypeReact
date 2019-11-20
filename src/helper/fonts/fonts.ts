@@ -1,6 +1,6 @@
 import path from "path";
 
-const Fonts = (name: string, extension: string) => `
+export const fonts = (name: string, extension: string) => `
 /* vietnamese */
 @font-face {
   font-family: '${name}';
@@ -173,5 +173,3 @@ const Fonts = (name: string, extension: string) => `
   src: url('${path.resolve(__dirname, `../../fonts/${name}/${name}-Black.${extension}`)}') format('${extension}');
 }
 `;
-// tslint:disable-next-line: no-default-export
-export default Fonts;

@@ -1,4 +1,4 @@
-import pxToRem from "helper/scales/scales";
+import { pxToRem } from "helper";
 import styled, { css, keyframes } from "styled-components";
 import { IModalStyled } from "./type";
 export const Container = styled.div`

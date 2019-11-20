@@ -1,12 +1,9 @@
 import React, { createContext } from "react";
 import { Store } from "./store";
+import { defaultActions as addSideModalDefaultActions, defaultState as addSideModalDefaultState } from "./store/sideModal/action";
+// import
+
 import { IStore, IStoreContent } from "./store/types";
-
-import {
-  defaultActions as addSideModalDefaultActions,
-  defaultState as addSideModalDefaultState
-} from "./store/sideModal/action";
-
 
 interface IProviderProps {
   children: JSX.Element;
@@ -15,11 +12,13 @@ interface IProviderProps {
 const ContextStore = (useValue: IStore) => {
   const Context = createContext<IStoreContent>({
     state: {
-      sideModal: addSideModalDefaultState
+      sideModal: addSideModalDefaultState,
+      // state
     },
     // tslint:disable-next-line: object-literal-sort-keys
     actions: {
-      sideModalAction: addSideModalDefaultActions
+      sideModalAction: addSideModalDefaultActions,
+      // actions
     }
   });
 
