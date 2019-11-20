@@ -6,19 +6,10 @@
   "dependencies": {
     "axios": "^0.19.0",
     "customize-cra": "^0.8.0",
-    "global": "^4.4.0",
     "react": "^16.9.0",
-    "react-adal": "^0.5.0",
     "react-dom": "^16.9.0",
-    "react-google-recaptcha": "^2.0.1",
     "react-gtm-module": "^2.0.8",
-    "react-multi-carousel": "^2.2.6",
     "react-router-dom": "^5.1.2",
-    "react-script-hook": "^1.0.11",
-    "react-scripts": "3.2.0",
-    "reactotron-react-js": "^3.3.4",
-    "recaptcha-v3-react": "^3.0.3",
-    "serve": "^11.2.0",
     "styled-components": "^4.4.0",
     "lottie-react-web": "^2.1.4"
   },
@@ -28,7 +19,6 @@
     "@types/axios": "^0.14.0",
     "@types/node": "^12.7.5",
     "@types/react": "^16.9.2",
-    "@types/react-adal": "^0.4.1",
     "@types/react-dom": "^16.9.0",
     "@types/react-google-recaptcha": "^1.1.0",
     "@types/react-gtm-module": "^2.0.0",
@@ -36,7 +26,11 @@
     "husky": "^3.0.5",
     "react-app-rewired": "^2.1.4",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "serve": "^11.2.0",
+    "global": "^4.4.0",
+    "react-script-hook": "^1.0.11",
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "lint": "tslint --project ./tsconfig.json --fix src/**/**/*.ts src/**/**/*.tsx",

@@ -1,4 +1,4 @@
-const API = process.env.REACT_APP_EMDIA_API;
+const API = process.env.REACT_APP_BASE_API;
 
 export const callApi = (method: string, path: string, data?: object) => {
   return fetch(`${API}/${path}`, {
