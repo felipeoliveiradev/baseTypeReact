@@ -2,7 +2,7 @@ import { pxToRem } from "helper";
 import styled, { css, keyframes } from "styled-components";
 import { IModalStyled } from "./type";
 export const Container = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.color.white.w100};
   position: fixed;
   transform: ${(props: IModalStyled) =>
     props.stateMoments === false ? "translateX(100%)" : "translateX(0%)"};
@@ -12,7 +12,7 @@ export const Container = styled.div`
   height: 100%;
   overflow-y: auto;
   overflow-x: none;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   display: flex !important;
   flex-direction: column;
@@ -45,7 +45,7 @@ export const ContainerBackground = styled.div`
   /* position: none; */
   display: ${(props: IModalStyled) =>
     props.stateMoments === false ? "none" : "flex"};
-  background: #000;
+  background: ${(props) => props.theme.color.black.b100};
   opacity: 0;
   ${(props: IModalStyled) =>
     props.stateMoments === false

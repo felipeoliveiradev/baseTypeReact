@@ -9,21 +9,21 @@ type ButtonEvent = React.MouseEvent<HTMLElement>;
 export const DefaultHeader = () => {
   const {
     actions: {
-      sideModalAction: { setToogle }
+      sideModalAction: { setOptions }
     },
     state: {
-      sideModal: { toogle }
+      sideModal: { options }
     }
   } = useContext(AppContext.Context);
 
   return (
     <Container>
           <div />
-          <h3>{toogle.title}</h3>
+          <h3>{options.title}</h3>
       <button onClick={(e: ButtonEvent) => {
-              setToogle({
-                ...toogle,
-                open: !toogle.open
+              setOptions({
+                ...options,
+                state: !options.state
               });
             }}
           >

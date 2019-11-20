@@ -17,7 +17,7 @@ export const Container = styled.div`
       text-transform: uppercase;
       margin: 0;
       padding:0;
-      color:#5e347c;
+      color:${(props) => props.theme.color.purple.p100};
     }
     button {
       border: none;
