@@ -1,33 +1,48 @@
 import React, { useContext } from "react";
 
-import {Bars, Profile} from "assets/icons";
-import {LogoPurple} from "assets/images";
+import { Bars, Profile } from "assets/icons";
+import { LogoPurple } from "assets/images";
 import { AppContext } from "context";
-import { Modals } from "store/sideModal/types";
+import { ModalsBodyTypes, ModalsHeaderTypes } from "store/sideModal/types";
 import { Container, Inner } from "./style";
 import { IHeader } from "./types";
 export const Header = (props: IHeader) => {
   const { actions, state } = useContext(AppContext.Context);
   const session = sessionStorage.getItem("adal.idtoken");
-
-  const handleExemplo = () => {
-    actions.sideModalAction.setToogle({
-      open: !state.sideModal.toogle.open,
-      title: "Exemplo",
-      type: Modals.DEFAULT
+  const handleCadastro = () => {
+    actions.sideModalAction.setOptions({
+      body: {
+        type: ModalsBodyTypes.REGISTER
+      },
+      header: {
+        type: ModalsHeaderTypes.DEFAULT
+      },
+      state: !state.sideModal.options.state
+    });
+  };
+  const handleProfile = () => {
+    actions.sideModalAction.setOptions({
+      body: {
+        type: ModalsBodyTypes.PROFILE
+      },
+      header: {
+        type: ModalsHeaderTypes.DEFAULT
+      },
+      state: !state.sideModal.options.state,
+      title: "Perfil"
     });
   };
   return (
-    <Container >
+    <Container>
       <Inner>
         <div className="left">
           <img src={LogoPurple} alt="logo" />
         </div>
         <div className="right">
           {(session && (
-            <button onClick={handleExemplo} className="logado">
+            <button onClick={handleProfile} className="logado">
               <img src={Profile} alt="button" />
-              <label>Exemplo</label>
+              <label>PERFIL</label>
             </button>
           )) || (
             <>
@@ -35,13 +50,17 @@ export const Header = (props: IHeader) => {
                 <li>
                   <a href="#banner">Home</a>
                 </li>
+                <li>
+                  <a href="#vantagens">Vantagens</a>
+                </li>
+                <li>
+                  <a href="#parceiros">Parceiros</a>
+                </li>
               </nav>
-              <button onClick={handleExemplo} className="icon">
+              <button onClick={handleCadastro} className="icon">
                 <img src={Bars} alt="button" />
               </button>
-              <button onClick={handleExemplo}>
-               Exemplo Botao
-              </button>
+              <button onClick={handleCadastro}>QUERO SER PARCEIRO</button>
             </>
           )}
         </div>

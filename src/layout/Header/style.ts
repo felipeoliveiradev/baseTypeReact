@@ -1,7 +1,7 @@
 import { grid, pxToRem } from "helper";
 import styled from "styled-components";
 export const Container = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.color.white.w100};
   height: ${pxToRem(90)};
   position: fixed;
   top:0;
@@ -41,25 +41,25 @@ export const Inner = styled.div`
         height: 100%;
         display: flex;
         align-items: center;
-        border-top: 3px solid #fff;
+        border-top: 3px solid ${(props) => props.theme.color.white.w100};
         padding-left: ${pxToRem(14)};
         padding-right: ${pxToRem(14)};
         a {
           text-decoration: none;
           font-size: ${pxToRem(14)};
-          color: #5e347c;
+          color: ${(props) => props.theme.color.purple.p100};
           text-transform: uppercase;
           &:target{
-            color: #ffb300;
+            color: ${(props) => props.theme.color.yellow.y200};
           }
         }
         &:hover {
-          border-top: 3px solid #ffb300;
+          border-top: 3px solid ${(props) => props.theme.color.yellow.y200};
           transition: all 0.5s linear;
           a {
-            color: #ffb300;
+            color: ${(props) => props.theme.color.yellow.y200};
             &:target {
-              color: #ffb300;
+              color: ${(props) => props.theme.color.yellow.y200};
             }
           }
         }
@@ -78,13 +78,13 @@ export const Inner = styled.div`
       align-items: center;
       label {
         font-size: ${pxToRem(10)};
-        color: #6a317f;
+        color: ${(props) => props.theme.color.purple.p100};
       }
       &.icon{
         display:none;
       }
       &:last-child{
-       background: #ffb300;
+       background: ${(props) => props.theme.color.yellow.y200};
        width: ${pxToRem(200)};
        height: ${pxToRem(50)};
        border-radius: ${pxToRem(8)};
@@ -95,7 +95,7 @@ export const Inner = styled.div`
        font-weight: 700;
        line-height: ${pxToRem(22)};
        letter-spacing: ${pxToRem(0.32)};
-      color:#5E347C;
+      color:${(props) => props.theme.color.purple.p100};
       outline: none;
       }
       @media (max-width: 767px) {

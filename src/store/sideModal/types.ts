@@ -1,35 +1,54 @@
-import { SET_TOOGLE } from "./consts";
+import { SET_MODAL } from "./consts";
 // ENUMS
-export enum Modals {
-  DEFAULT = ""
+export enum ModalsBodyTypes {
+  DEFAULT = "",
+  REGISTER = "register",
+  PROFILE = "profile",
+  EDIT = "edit"
 }
 
-export enum ModalsTypes {
-  DEFAULT = ""
+export enum ModalsFields {
+  DEFAULT = "",
+  CELLPHONE = "cellphone",
+  NAME= "name",
+  EMAIL = "email"
 }
 
-export enum ModalsHeader {
-  DEFAULT = ""
+export enum ModalsHeaderTypes {
+  DEFAULT = "",
+  CHANGES= "changes"
+}
+export enum ModalsIcon {
+  CURRENCY = "currency",
+  STORE = "store"
 }
 
 // INTERFACES
 export interface ISideModalState {
-  toogle: IToogleType;
+  options: IModalsTypes;
 }
-export interface IToogleType {
-  open: boolean;
-  type: Modals;
+export interface IModalsTypes {
+  state: boolean;
+  body: IModalBody;
   title?: string;
-  store?: IToogleStore;
-  header?: string;
+  header: IHeaderModal;
 }
-export interface IToogleActions {
-  payload: IToogleType;
-  toogle: typeof SET_TOOGLE;
+export interface IModalBody {
+  type?: string;
+  custom?: JSX.Element;
+  field?: string;
 }
-export interface IToogleStore {
-  type: string;
-  field: string;
+export interface IHeaderModal {
+  name?: string;
+  type?: string;
+  subName?: string;
+  icon?: string;
+  custom?: JSX.Element;
+}
+
+export interface IModalAction {
+  payload: IModalsTypes;
+  options: typeof SET_MODAL;
 }
 export interface ISideModalStore {
   state: ISideModalState;
@@ -37,7 +56,7 @@ export interface ISideModalStore {
 }
 
 export interface ISideModalAction {
-  setToogle(toogle: IToogleType): void;
+  setOptions(options: IModalsTypes): void;
 }
 
-export type IToogleActionsTypes = IToogleActions;
+export type IModalActionsTypes = IModalAction;

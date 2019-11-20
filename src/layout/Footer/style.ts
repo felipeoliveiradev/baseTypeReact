@@ -2,7 +2,7 @@ import { grid, pxToRem } from "helper";
 import styled from "styled-components";
 import { IStyleFooter } from "./types";
 export const Container = styled.div`
-  background: #5e347c;
+  background: ${(props) => props.theme.color.purple.p100};
   padding: ${pxToRem(12)} ${pxToRem(15)};
 `;
 
@@ -14,19 +14,19 @@ export const Icon = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: ${pxToRem(1)} solid #fff;
-  color: #fff;
+  border: ${pxToRem(1)} solid ${(props) => props.theme.color.white.w100};
+  color: ${(props) => props.theme.color.white.w100};
   transition: all 0.5s linear;
   &:hover {
-    border-color: #ffb300;
+    border-color: ${(props) => props.theme.color.yellow.y200};
     div {
-      background-color: #ffb300;
+      background-color: ${(props) => props.theme.color.yellow.y200};
     }
   }
 `;
 
 export const Image = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.color.white.w100};
   width: ${pxToRem(16)};
   height: ${pxToRem(16)};
   mask: url(${(props: IStyleFooter) => props.icone});
@@ -57,7 +57,7 @@ export const Inner = styled.div`
       }
       p {
         text-align: left;
-        color: #fff;
+        color: ${(props) => props.theme.color.white.w100};
         font-weight: 300;
         font-size: ${pxToRem(14)};
       }
@@ -100,7 +100,7 @@ export const Inner = styled.div`
         width: 100%;
         display: none;
         border: none;
-        background: #8554e0;
+        background: ${(props) => props.theme.color.purple.p200};
         height: ${pxToRem(1)};
         @media (max-width: 767px) {
           display: block;
@@ -108,7 +108,7 @@ export const Inner = styled.div`
       }
 
       span {
-        color: #fff;
+        color: ${(props) => props.theme.color.white.w100};
         font-weight: 400;
         font-size: ${pxToRem(12)};
 

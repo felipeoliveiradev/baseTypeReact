@@ -1,30 +1,34 @@
 import { useReducer } from "react";
-import { SET_TOOGLE } from "./consts";
+import { SET_MODAL } from "./consts";
 import { Reducer } from "./reducer";
 import {
+  IModalsTypes,
   ISideModalAction,
   ISideModalState,
   ISideModalStore,
-  IToogleType,
-  Modals,
-  ModalsHeader
+  ModalsBodyTypes,
+  ModalsHeaderTypes
 } from "./types";
 
 export const defaultState: ISideModalState = {
-  toogle: {
-    header: ModalsHeader.DEFAULT,
-    open: false,
-    store: {
-      field: "",
-      type: ""
+  options: {
+    body: {
+      type: ModalsBodyTypes.DEFAULT
     },
-    title: "",
-    type: Modals.DEFAULT
+    header: {
+      icon: "",
+      name: "",
+      subName: "",
+      type: ModalsHeaderTypes.DEFAULT
+    },
+
+    state: false,
+    title: ""
   }
 };
 
 export const defaultActions: ISideModalAction = {
-  setToogle: (toogle: IToogleType) => ({ open: false, type: Modals.DEFAULT, title: "", store: [], header: ModalsHeader.DEFAULT })
+  setOptions: (options: IModalsTypes) => null
 };
 
 export const SideModalStore = (
@@ -32,16 +36,16 @@ export const SideModalStore = (
 ): ISideModalStore => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
-  const setToogle = (toogle: IToogleType) => {
+  const setOptions = (options: IModalsTypes) => {
     dispatch({
-      payload: toogle,
-      toogle: SET_TOOGLE
+      options: SET_MODAL,
+      payload: options
     });
   };
 
   return {
     actions: {
-      setToogle
+      setOptions
     },
     state
   };

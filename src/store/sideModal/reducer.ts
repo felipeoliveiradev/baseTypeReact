@@ -1,13 +1,13 @@
-import { SET_TOOGLE } from "./consts";
-import { ISideModalState, IToogleActionsTypes } from "./types";
+import { SET_MODAL } from "./consts";
+import { IModalActionsTypes, ISideModalState } from "./types";
 
 export const Reducer = (
   state: ISideModalState,
-  action: IToogleActionsTypes
+  action: IModalActionsTypes
 ) => {
-  switch (action.toogle) {
-    case SET_TOOGLE:
-      return { ...state, toogle: action.payload };
+  switch (action.options) {
+    case SET_MODAL:
+      return { ...state, options: action.payload };
     default:
       return state;
   }

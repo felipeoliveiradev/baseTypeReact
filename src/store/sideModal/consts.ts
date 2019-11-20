@@ -1,2 +1,2 @@
-export const SET_TOOGLE = "SET_TOOGLE";
-export const SET_TOOGLE_TYPE = "SET_TOOGLE_TYPE";
+export const SET_MODAL = "SET_MODAL";
+export const SET_MODAL_TYPE = "SET_MODAL_TYPE";
