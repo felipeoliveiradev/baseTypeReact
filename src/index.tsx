@@ -1,7 +1,7 @@
 import React from "react";
 import { runWithAdal } from "react-adal";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "styled-components"
+import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 import { App } from "./app";
 import { authContext } from "./config/auth/adal";
