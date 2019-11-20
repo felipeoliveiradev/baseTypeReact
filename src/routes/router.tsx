@@ -2,11 +2,11 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 // import pages
+import { Main } from "layout";
 import {
   Home,
   // import routers
 } from "../pages";
-import { Main } from "./styles";
 
 // Protect Router
 

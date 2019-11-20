@@ -11,8 +11,8 @@ export const App: React.FunctionComponent = () => {
   TagManager.initialize(tagManagerArgs);
   return (
     <>
-      <Header />
       <Modal />
+      <Header />
       <Router>
         <Routers />
       </Router>
