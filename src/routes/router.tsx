@@ -6,7 +6,7 @@ import { Main } from "layout";
 import {
   Home,
   // import routers
-} from "../pages";
+} from "pages";
 
 // Protect Router
 
