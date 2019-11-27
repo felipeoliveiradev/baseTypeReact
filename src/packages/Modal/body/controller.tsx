@@ -1,7 +1,7 @@
 import { AppContext } from "context";
 import React, { useContext } from "react";
 import { ModalsBodyTypes } from "store/sideModal/types";
-import { EditModal, PerfilModal, RegisterModal } from "./";
+import { DefaultModal } from "./";
 
 export const ModalController = () => {
   const {
@@ -15,12 +15,8 @@ export const ModalController = () => {
     return body.custom;
   } else {
     switch (body.type) {
-      case ModalsBodyTypes.REGISTER:
-        return <RegisterModal />;
-      case ModalsBodyTypes.PROFILE:
-        return <PerfilModal />;
-      case ModalsBodyTypes.EDIT:
-        return <EditModal />;
+      case ModalsBodyTypes.DEFAULT:
+        return <DefaultModal />;
       default:
         return <></>;
     }

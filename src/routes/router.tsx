@@ -15,6 +15,7 @@ export const Routers = () => {
     <Main>
       <Switch>
         <Route exact path="/" component={Home} />
+        {/* route */}
       </Switch>
     </Main>
   );

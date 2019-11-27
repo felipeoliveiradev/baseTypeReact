@@ -1,9 +1,9 @@
 import React, { createContext } from "react";
+import { defaultActions as loadingDefaultActions, defaultState as loadingDefaultState } from "store/loading/action";
 import { Store } from "./store";
 import { defaultActions as addListDefautlActions, defaultState as addListDefautlState } from "./store/addListItem/action";
 import { defaultActions as registerDefaultActions, defaultState as registerDefaultstate } from "./store/register/action";
 import { defaultActions as addSideModalDefaultActions, defaultState as addSideModalDefaultState } from "./store/sideModal/action";
-import { defaultActions as loadingDefaultActions, defaultState as loadingDefaultState } from "store/loading/action";
 // import
 
 import { IStore, IStoreContent } from "./store/types";

@@ -1,7 +1,7 @@
 import { AppContext } from "context";
 import React, { useContext } from "react";
 import { ModalsHeaderTypes } from "store/sideModal/types";
-import { ChangesHeader, DefaultHeader } from "./";
+import { DefaultHeader } from "./";
 
 export const ModalHeaderController = () => {
   const {
@@ -15,10 +15,10 @@ export const ModalHeaderController = () => {
     return header.custom;
   } else {
     switch (header.type) {
-      case ModalsHeaderTypes.CHANGES:
-        return <ChangesHeader />;
-      default:
+      case ModalsHeaderTypes.DEFAULT:
         return <DefaultHeader />;
+      default:
+        return <></>;
     }
   }
 };
