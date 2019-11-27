@@ -1,9 +1,12 @@
 const API = process.env.REACT_APP_BASE_API;
 
-export const callApi = (method: string, path: string, data?: object) => {
+export const callApi = (method: string, path: string, data?: object, protect?: string) => {
   return fetch(`${API}/${path}`, {
     body: JSON.stringify(data),
-    headers: {
+    headers: protect ? {
+      "Authorization": "Bearer " + protect,
+      "Content-Type": "application/json"
+    } : {
       "Content-Type": "application/json"
     },
     method
